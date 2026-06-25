@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SAFEHOOK — Não morda a isca.</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Navegação principal">
+  <div class="nav-logo">
+    <img src="assets/images/logo.png" alt="SAFEHOOK Logo" style="width:44px;height:44px;object-fit:contain;display:block;vertical-align:middle" />
+    SAFEHOOK
+  </div>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" tabindex="-1"/>
+  <label for="nav-toggle" class="nav-hamburger" aria-label="Abrir menu">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </label>
+  <div class="nav-menu">
+    <div class="nav-links">
+      <button onclick="showSection('platform')">Plataforma</button>
+      <button onclick="showSection('phishing')">Phishing</button>
+      <button onclick="showSection('lgpd')">LGPD</button>
+    </div>
+    <button class="nav-cta" onclick="startQuiz()">Iniciar Avaliação</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span aria-hidden="true"></span>
+        Plataforma de Conscientização em Segurança da Informação
+      </div>
+      <h1 class="hero-title" id="hero-title">
+        <span class="accent">SAFE</span>HOOK
+      </h1>
+      <p class="hero-slogan">Não morda a isca. Mantenha-se seguro.</p>
+      <p class="hero-desc">Descubra vulnerabilidades, aprenda sobre ameaças digitais e receba recomendações para fortalecer a segurança da sua empresa.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="startQuiz()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          Iniciar Avaliação
+        </button>
+        <button class="btn-secondary" onclick="showSection('platform')">Conhecer a Plataforma</button>
+      </div>
+      <div class="hero-pills" role="list" aria-label="Tópicos abordados">
+        <div class="pill" role="listitem"><span class="dot" aria-hidden="true"></span> Segurança da Informação</div>
+        <div class="pill" role="listitem"><span class="dot" aria-hidden="true"></span> LGPD</div>
+        <div class="pill" role="listitem"><span class="dot" aria-hidden="true"></span> Gestão de Riscos</div>
+        <div class="pill" role="listitem"><span class="dot" aria-hidden="true"></span> Conscientização</div>
+        <div class="pill" role="listitem"><span class="dot" aria-hidden="true"></span> Phishing</div>
+        <div class="pill" role="listitem"><span class="dot" aria-hidden="true"></span> Governança</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORM -->
+<section id="platform-section" class="hidden" aria-labelledby="platform-title">
+  <div class="container">
+    <div class="section-tag">Plataforma</div>
+    <h2 id="platform-title" style="font-size:2rem;margin-bottom:0.75rem">O que é o SAFEHOOK?</h2>
+    <p style="color:var(--text2);max-width:580px;margin-bottom:3rem;font-size:15px">Uma plataforma educacional completa focada em conscientização, avaliação de maturidade e boas práticas em Segurança da Informação.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Avaliação de Maturidade</h3>
+        <p>Diagnóstico completo do nível de segurança da sua organização com 30 perguntas organizadas em 6 categorias estratégicas.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3>Simulador de Phishing</h3>
+        <p>Treine sua capacidade de identificar e-mails maliciosos com exemplos reais e explicações detalhadas sobre cada tentativa.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Dashboard de Risco</h3>
+        <p>Visualização clara dos seus principais riscos, nível de conformidade e evolução de maturidade ao longo do tempo.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3>Gestão de Incidentes</h3>
+        <p>Registre, categorize e acompanhe incidentes de segurança com campos estruturados para tipo, severidade e ações corretivas.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3>Boas Práticas de Segurança</h3>
+        <p>Aprenda recomendações práticas para fortalecer a proteção de dados, reduzir riscos e aumentar a maturidade em segurança da informação.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Conformidade LGPD</h3>
+        <p>Avalie sua aderência à Lei Geral de Proteção de Dados com checklist prático de direitos, bases legais e obrigações.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem">
+      <button class="btn-primary" onclick="startQuiz()">Começar agora — É gratuito</button>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz-section" class="hidden" aria-labelledby="quiz-title">
+  <div class="quiz-container">
+    <div class="quiz-header">
+      <div class="section-tag">Avaliação de Maturidade</div>
+      <h2 id="quiz-title">Diagnóstico de Segurança</h2>
+      <p style="color:var(--text2);font-size:14px;margin-top:0.5rem">Responda honestamente para obter um resultado preciso</p>
+    </div>
+    <div class="quiz-progress" role="progressbar" aria-label="Progresso da avaliação" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+      <div class="quiz-progress-bar" id="progressBar"></div>
+    </div>
+    <div id="quizSteps"></div>
+  </div>
+</section>
+
+<!-- RESULT -->
+<section id="result-section" class="hidden" aria-labelledby="result-title">
+  <div class="result-container">
+    <div class="section-tag">Resultado</div>
+    <h2 id="result-title" style="font-size:2rem;margin-bottom:2rem">Sua Avaliação de Maturidade</h2>
+    <div class="score-card" id="scoreCard"></div>
+    <div class="recommendations" id="recommendations"></div>
+    <div class="result-actions">
+      <button class="btn-primary" onclick="showSection('dashboard')">Ver Dashboard</button>
+
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard-section" class="hidden" aria-labelledby="dash-title">
+  <div class="container">
+    <div class="section-tag">Dashboard</div>
+    <h2 id="dash-title" style="font-size:2rem;margin-bottom:0.5rem">Painel de Segurança</h2>
+    <p style="color:var(--text2);font-size:14px;margin-bottom:2rem">Com base nos resultados da sua avaliação</p>
+    <div class="dash-grid" id="dashCards"></div>
+    <div class="risk-list" id="riskList"></div>
+  </div>
+</section>
+
+<!-- PHISHING -->
+<section id="phishing-section" class="hidden" aria-labelledby="phishing-title">
+  <div class="container">
+    <div class="section-tag">Simulador</div>
+    <h2 id="phishing-title" style="font-size:2rem;margin-bottom:0.5rem">Simulador de Phishing</h2>
+    <div class="phishing-intro">
+      <p style="color:var(--text2);font-size:15px">Analise os e-mails abaixo e classifique cada um. Você consegue identificar qual é legítimo e qual é uma armadilha?</p>
+    </div>
+    <div class="phishing-cards" id="phishingCards"></div>
+  </div>
+</section>
+
+<!-- LGPD -->
+<section id="lgpd-section" class="hidden" aria-labelledby="lgpd-title">
+  <div class="container">
+    <div class="section-tag">LGPD</div>
+    <h2 id="lgpd-title" style="font-size:2rem;margin-bottom:0.75rem">Lei Geral de Proteção de Dados</h2>
+    <p style="color:var(--text2);max-width:580px;margin-bottom:3rem;font-size:15px">A LGPD (Lei nº 13.709/2018) estabelece regras sobre coleta, armazenamento e tratamento de dados pessoais no Brasil. Entenda os princípios fundamentais.</p>
+    <div class="lgpd-grid" id="lgpdGrid"></div>
+    <div style="margin-top:3rem;background:var(--card);border:1px solid rgba(124,58,237,0.3);border-radius:var(--r);padding:1.75rem;max-width:680px">
+      <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;font-family:'Space Grotesk',sans-serif">⚠️ Sanções previstas</h3>
+      <p style="font-size:14px;color:var(--text2);line-height:1.6">O descumprimento da LGPD pode resultar em advertências, multa de até <strong style="color:var(--purple-light)">R$ 50 milhões por infração</strong>, bloqueio ou eliminação dos dados pessoais, além de publicização da infração. A ANPD (Autoridade Nacional de Proteção de Dados) é o órgão responsável pela fiscalização.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INCIDENTS -->
+<section id="incidents-section" class="hidden" aria-labelledby="incidents-title">
+  <div class="container" style="max-width:780px">
+    <div class="section-tag">Gestão de Incidentes</div>
+    <h2 id="incidents-title" style="font-size:2rem;margin-bottom:0.5rem">Registro de Incidentes</h2>
+    <p style="color:var(--text2);font-size:14px;margin-bottom:2rem">Registre e acompanhe incidentes de segurança da sua organização</p>
+    <div class="incident-form">
+      <h3 style="font-size:1rem;font-weight:600;margin-bottom:1.25rem;font-family:'Space Grotesk',sans-serif">Novo Incidente</h3>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="inc-type">Tipo</label>
+          <select id="inc-type">
+            <option>Phishing</option>
+            <option>Ransomware</option>
+            <option>Acesso não autorizado</option>
+            <option>Vazamento de dados</option>
+            <option>Engenharia social</option>
+            <option>Malware</option>
+            <option>DDoS</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="inc-date">Data</label>
+          <input type="date" id="inc-date"/>
+        </div>
+        <div class="form-field">
+          <label for="inc-sev">Severidade</label>
+          <select id="inc-sev">
+            <option>Baixa</option>
+            <option>Média</option>
+            <option>Alta</option>
+            <option>Crítica</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="inc-status">Status</label>
+          <select id="inc-status">
+            <option>Aberto</option>
+            <option>Em andamento</option>
+            <option>Resolvido</option>
+          </select>
+        </div>
+        <div class="form-field full">
+          <label for="inc-desc">Descrição</label>
+          <textarea id="inc-desc" placeholder="Descreva o incidente..."></textarea>
+        </div>
+        <div class="form-field full">
+          <label for="inc-action">Ação Corretiva</label>
+          <textarea id="inc-action" placeholder="Ações tomadas ou planejadas..."></textarea>
+        </div>
+      </div>
+      <button class="btn-primary" onclick="addIncident()" style="width:100%;justify-content:center;padding:12px">Registrar Incidente</button>
+    </div>
+    <div class="incident-list" id="incidentList"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="SAFEHOOK Logo" style="width:40px;height:40px;object-fit:contain;display:block" />
+        SAFEHOOK
+      </div>
+      <p>Plataforma educacional de Segurança da Informação. Não morda a isca. Mantenha-se seguro.</p>
+    </div>
+    <div class="footer-dev">
+      <p class="dev-name">Alex Cavalcante Costa</p>
+      <p class="dev-desc">Estudante de Análise e Desenvolvimento de Sistemas com foco em Segurança da Informação, Cybersegurança, Governança, Gestão de Riscos e Análise de Dados.</p>
+      <div class="footer-links">
+        <a class="footer-link" href="https://www.linkedin.com/in/alex-cavalcante-costa-276483197/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a class="footer-link" href="https://alexcavalcantep.netlify.app" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Portfólio
+        </a>
+        <a class="footer-link" href="https://wa.me/5511930141234" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+        <a class="footer-link" href="mailto:alexcavalcante1800@gmail.com?subject=Contato%20via%20SAFEHOOK" target="_blank" rel="noopener" onclick="var t=Date.now();setTimeout(function(){if(Date.now()-t<1500){window.open('https://mail.google.com/mail/?view=cm&fs=1&to=alexcavalcante1800@gmail.com&su=Contato%20via%20SAFEHOOK','_blank')}},500);return true;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          E-mail
+        </a>
+
+      </div>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <span>© 2025 SAFEHOOK. Desenvolvido por Alex Cavalcante Costa.</span>
+    <span>Segurança da Informação · LGPD · Cybersegurança</span>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast" role="alert" aria-live="polite">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+  <span id="toastMsg"></span>
+</div>
+
+
+
+<!-- LGPD Modal -->
+<div id="lgpdModal" role="dialog" aria-modal="true" aria-labelledby="lgpdModalTitle" onclick="if(event.target===this)closeLgpdModal()">
+  <div class="lgpd-modal-box">
+    <div class="lgpd-modal-header">
+      <div class="lgpd-modal-titles">
+        <div class="lgpd-modal-num" id="lgpdModalNum"></div>
+        <h3 id="lgpdModalTitle"></h3>
+      </div>
+      <button class="lgpd-modal-close" onclick="closeLgpdModal()" aria-label="Fechar">×</button>
+    </div>
+    <div class="lgpd-modal-body">
+      <p class="lgpd-modal-desc" id="lgpdModalDesc"></p>
+      <div class="lgpd-modal-example">
+        <span class="ex-label">📋 Exemplo prático</span>
+        <p id="lgpdModalExample"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
