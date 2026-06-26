@@ -108,7 +108,7 @@ O projeto é 100% estático e pode ser publicado em qualquer serviço de hospeda
 ## Autor
 
 **Alex Cavalcante Costa**  
-Estudante de Análise e Desenvolvimento de Sistemas com foco em Segurança da Informação, Cybersegurança, Governança, Gestão de Riscos e Análise de Dados.
+Estudante de Análise e Desenvolvimento de Sistemas com foco em Desenvolvimento Web, Cybersegurança, Governança, Gestão de Riscos e Análise de Dados.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Alex_Cavalcante-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/alex-cavalcante-costa-276483197/)
 [![Portfólio](https://img.shields.io/badge/Portfólio-alexcaval--portfolio.vercel.app-7C3AED?style=flat&logo=vercel)](https://alexcaval-portfolio.vercel.app)
