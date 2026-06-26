@@ -1,0 +1,122 @@
+# ============================================================
+# .gitignore — SAFEHOOK
+# Projeto HTML, CSS e JavaScript (client-side estático)
+# ============================================================
+
+# -------------------------------------------------------
+# Sistema Operacional
+# -------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encdata
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+
+# -------------------------------------------------------
+# Editores e IDEs
+# -------------------------------------------------------
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# JetBrains (WebStorm, PhpStorm, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Neovim
+*.swp
+*.swo
+Session.vim
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# -------------------------------------------------------
+# Node.js / npm (ferramentas de desenvolvimento local)
+# -------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.npm
+.pnp
+.pnp.js
+
+# -------------------------------------------------------
+# Build / Dist
+# -------------------------------------------------------
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+
+# -------------------------------------------------------
+# Variáveis de ambiente e configurações sensíveis
+# -------------------------------------------------------
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+*.key
+*.pem
+secrets.json
+
+# -------------------------------------------------------
+# Logs
+# -------------------------------------------------------
+logs/
+*.log
+
+# -------------------------------------------------------
+# Testes e cobertura
+# -------------------------------------------------------
+coverage/
+.nyc_output/
+
+# -------------------------------------------------------
+# Arquivos temporários e de backup
+# -------------------------------------------------------
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+
+# -------------------------------------------------------
+# Compactados
+# -------------------------------------------------------
+*.zip
+*.tar.gz
+*.rar
+*.7z
