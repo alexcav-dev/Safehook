@@ -11,7 +11,7 @@
 
 <!-- NAV -->
 <nav id="nav" role="navigation" aria-label="Navegação principal">
-  <div class="nav-logo">
+  <div class="nav-logo" onclick="navigateTo('hero')" role="button" tabindex="0" aria-label="Voltar para a página inicial" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();navigateTo('hero')}" style="cursor:pointer">
     <img src="assets/images/logo.png" alt="SAFEHOOK Logo" style="width:44px;height:44px;object-fit:contain;display:block;vertical-align:middle" />
     SAFEHOOK
   </div>
@@ -23,9 +23,9 @@
   </label>
   <div class="nav-menu">
     <div class="nav-links">
-      <button onclick="showSection('platform')">Plataforma</button>
-      <button onclick="showSection('phishing')">Phishing</button>
-      <button onclick="showSection('lgpd')">LGPD</button>
+      <button onclick="navigateTo('platform')">Plataforma</button>
+      <button onclick="navigateTo('phishing')">Phishing</button>
+      <button onclick="navigateTo('lgpd')">LGPD</button>
     </div>
     <button class="nav-cta" onclick="startQuiz()">Iniciar Avaliação</button>
   </div>
@@ -49,7 +49,7 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
           Iniciar Avaliação
         </button>
-        <button class="btn-secondary" onclick="showSection('platform')">Conhecer a Plataforma</button>
+        <button class="btn-secondary" onclick="navigateTo('platform')">Conhecer a Plataforma</button>
       </div>
       <div class="hero-pills" role="list" aria-label="Tópicos abordados">
         <div class="pill" role="listitem"><span class="dot" aria-hidden="true"></span> Segurança da Informação</div>
@@ -142,7 +142,7 @@
     <div class="score-card" id="scoreCard"></div>
     <div class="recommendations" id="recommendations"></div>
     <div class="result-actions">
-      <button class="btn-primary" onclick="showSection('dashboard')">Ver Dashboard</button>
+      <button class="btn-primary" onclick="navigateTo('dashboard')">Ver Dashboard</button>
 
     </div>
   </div>

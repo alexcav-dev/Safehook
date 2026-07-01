@@ -10,8 +10,21 @@ function showSection(name){
   });
 }
 
+// Camada de histórico do navegador (integração com Swipe Back / botão voltar)
+function navigateTo(name){
+  showSection(name);
+  history.pushState({section:name},'','#'+name);
+}
+
+window.addEventListener('popstate',(e)=>{
+  const section=(e.state&&e.state.section)||'hero';
+  showSection(section);
+});
+
+history.replaceState({section:'hero'},'','#hero');
+
 function startQuiz(){
-  showSection('quiz');
+  navigateTo('quiz');
   initQuiz();
 }
 
@@ -148,7 +161,7 @@ function showResult(){
   window._quizLevel=level;
   window._quizAnswers=answers.slice();
   buildDashboard(pct);
-  showSection('result');
+  navigateTo('result');
 }
 
 function buildRecs(pct){
